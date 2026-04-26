@@ -1,0 +1,73 @@
+/* ================================= */
+/* FILE NAME: style.css */
+/* Styling for Event Registration */
+/* ================================= */
+
+/* Full page styling */
+body{
+    margin:0; /* Remove default margin */
+    padding:0; /* Remove default padding */
+    font-family:Arial, sans-serif; /* Font style */
+    background:linear-gradient(to right,#ff9966,#ff5e62); /* Gradient background */
+}
+
+/* Main container */
+.container{
+    width:70%; /* Container width */
+    margin:40px auto; /* Center align */
+    background:white; /* White box */
+    padding:30px; /* Inner spacing */
+    border-radius:12px; /* Rounded corners */
+    box-shadow:0 0 15px gray; /* Shadow effect */
+}
+
+/* Heading style */
+h1{
+    text-align:center; /* Center heading */
+    color:#333; /* Dark text */
+}
+
+/* Form section */
+.form-box{
+    display:flex; /* Flex layout */
+    flex-direction:column; /* Vertical items */
+    gap:15px; /* Gap between items */
+}
+
+/* Input fields */
+input{
+    padding:12px; /* Inner spacing */
+    font-size:16px; /* Text size */
+    border:1px solid gray; /* Border */
+    border-radius:8px; /* Rounded corners */
+}
+
+/* Buttons */
+button{
+    padding:12px; /* Inner spacing */
+    font-size:16px; /* Text size */
+    border:none; /* No border */
+    border-radius:8px; /* Rounded corners */
+    background:#ff5e62; /* Button color */
+    color:white; /* White text */
+    cursor:pointer; /* Hand cursor */
+}
+
+/* Hover effect */
+button:hover{
+    background:#e0484d; /* Darker color */
+}
+
+/* Output section */
+#participantList{
+    margin-top:30px; /* Space from top */
+}
+
+/* Registration card */
+.participant-card{
+    background:#f4f4f4; /* Light background */
+    padding:15px; /* Inner spacing */
+    margin-bottom:10px; /* Bottom space */
+    border-left:5px solid #ff5e62; /* Left border */
+    border-radius:8px; /* Rounded corners */
+}

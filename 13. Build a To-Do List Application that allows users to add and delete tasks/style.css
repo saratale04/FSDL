@@ -1,0 +1,45 @@
+body {
+  font-family: Arial;
+  background: linear-gradient(to right, #a8edea, #fed6e3);
+  text-align: center;
+}
+
+.todo-container {
+  width: 300px;
+  margin: auto;
+}
+
+input {
+  padding: 10px;
+  width: 65%;
+}
+
+button {
+  padding: 10px;
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.delete {
+  background: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+

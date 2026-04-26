@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students in Departments</title>
+
+    <!-- Load Chart.js -->
+    <script src="chart.js"></script>
+
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .chart-container{
+            width: 80%;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Heading -->
+<h1>Department Wise Students</h1>
+
+<!-- Canvas for Bar Chart -->
+<div class="chart-container">
+    <canvas id="myChart"></canvas>
+</div>
+
+<script>
+
+/* Static Data */
+const dept = ["CSE", "IT", "MECH", "CIVIL", "ECE"];
+const count = [120, 95, 80, 70, 100];
+
+/* Create Bar Chart */
+new Chart(document.getElementById("myChart"), {
+    type: 'bar',
+
+    data: {
+        labels: dept,
+        datasets: [{
+            label: 'Students',
+            data: count,
+            backgroundColor: [
+                'red',
+                'blue',
+                'green',
+                'orange',
+                'purple'
+            ]
+        }]
+    },
+
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+</script>
+
+</body>
+</html>

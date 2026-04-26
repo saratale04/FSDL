@@ -1,0 +1,26 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+/* Container */
+.box {
+    margin-top: 100px;
+}
+
+/* Time display */
+#time {
+    font-size: 40px;
+    margin: 20px 0;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

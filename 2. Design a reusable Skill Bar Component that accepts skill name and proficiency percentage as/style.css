@@ -1,0 +1,59 @@
+/*
+===========================================
+STYLING FOR SKILL BAR COMPONENT
+===========================================
+
+This file styles:
+- Page layout
+- Input fields
+- Skill bars
+===========================================
+*/
+
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Input fields styling */
+input {
+    padding: 10px;
+    margin: 5px;
+}
+
+/* Button styling */
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Main skill container */
+.skill {
+    width: 60%;
+    margin: 15px auto;
+    text-align: left;
+}
+
+/* Skill name text */
+.skill-name {
+    margin-bottom: 5px;
+}
+
+/* Background bar */
+.bar {
+    width: 100%;
+    background-color: #ddd;
+    height: 25px;
+    border-radius: 5px;
+}
+
+/* Filled progress bar */
+.progress {
+    height: 25px;
+    background-color: green;
+    text-align: right;
+    color: white;
+    padding-right: 5px;
+    border-radius: 5px;
+}

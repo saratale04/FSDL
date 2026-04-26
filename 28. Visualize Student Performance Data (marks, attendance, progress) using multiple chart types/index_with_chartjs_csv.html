@@ -1,0 +1,100 @@
+
+<!--
+FILE: student_chart_labeled.html
+
+HOW TO RUN:
+1. Keep chart.js in same folder
+2. Open in browser
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:20px;
+}
+.box {
+ background:white;
+ padding:10px;
+ text-align:center;
+}
+</style>
+</head>
+
+<body>
+<h2 align="center">Student Performance Dashboard</h2>
+
+<div class="container">
+
+<div class="box">
+<h3>Line Chart (Marks)</h3>
+<canvas id="line"></canvas>
+</div>
+
+<div class="box">
+<h3>Pie Chart (Performance)</h3>
+<canvas id="pie"></canvas>
+</div>
+
+<div class="box" style="grid-column:span 2;">
+<h3>Bar Chart (Attendance %)</h3>
+<canvas id="bar"></canvas>
+</div>
+
+</div>
+
+<script src="chart.js"></script>
+
+<script>
+let subjects=["Math","Science","English","History","CS"];
+let marks=[80,75,85,70,90];
+let attendance=[90,85,88,80,95];
+
+// LINE → Marks trend
+new Chart(line,{
+ type:"line",
+ data:{
+  labels:subjects,
+  datasets:[{
+   label:"Marks",
+   data:marks,
+   borderColor:"blue",
+   backgroundColor:"lightblue",
+   fill:true
+  }]
+ }
+});
+
+// BAR → Attendance comparison
+new Chart(bar,{
+ type:"bar",
+ data:{
+  labels:subjects,
+  datasets:[{
+   label:"Attendance %",
+   data:attendance,
+   backgroundColor:"purple"
+  }]
+ }
+});
+
+// PIE → Performance distribution
+new Chart(pie,{
+ type:"pie",
+ data:{
+  labels:["Good","Average","Poor"],
+  datasets:[{
+   data:[3,1,1],
+   backgroundColor:["green","orange","red"]
+  }]
+ }
+});
+</script>
+
+</body>
+</html>
+```

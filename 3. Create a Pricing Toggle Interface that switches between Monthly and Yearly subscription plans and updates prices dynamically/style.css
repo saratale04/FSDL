@@ -1,0 +1,40 @@
+/*
+====================================================
+PRICING TOGGLE INTERFACE - CSS FILE
+====================================================
+
+This file handles:
+- Page styling
+- Card layout
+- Price appearance
+====================================================
+*/
+
+/* Style for entire page */
+body {
+    font-family: Arial;          /* Set font */
+    text-align: center;          /* Center align text */
+    background-color: #f4f4f4;   /* Light background color */
+}
+
+/* Container for pricing cards */
+.container {
+    display: flex;               /* Arrange cards in row */
+    justify-content: center;     /* Center cards horizontally */
+    margin-top: 20px;
+}
+
+/* Individual card styling */
+.card {
+    background: white;           /* White background */
+    padding: 20px;
+    margin: 10px;
+    width: 150px;
+    border-radius: 10px;         /* Rounded corners */
+}
+
+/* Price text styling */
+.price {
+    font-size: 24px;             /* Bigger font */
+    color: green;                /* Highlight color */
+}

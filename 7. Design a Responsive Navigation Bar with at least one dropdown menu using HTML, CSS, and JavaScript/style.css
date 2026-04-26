@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Navbar */
+.navbar {
+    background: black;
+    color: white;
+    padding: 15px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Button */
+#dropBtn {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Menu */
+.menu {
+    display: none;
+    position: absolute;
+    background: gray;
+    padding: 10px;
+}
+
+/* Show class */
+.show {
+    display: block;
+}
+
+/* Items */
+.menu p {
+    margin: 5px 0;
+    cursor: pointer;
+}

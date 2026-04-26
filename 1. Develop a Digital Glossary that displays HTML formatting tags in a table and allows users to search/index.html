@@ -1,0 +1,89 @@
+<!--
+====================================================
+DIGITAL GLOSSARY PROJECT - HTML FILE
+====================================================
+
+This file is responsible for:
+1. Creating structure of webpage
+2. Displaying search bar
+3. Showing HTML tags in table format
+
+No backend required (pure frontend project)
+====================================================
+-->
+
+<!DOCTYPE html> <!-- Defines HTML5 document -->
+
+<html>
+<head>
+    <!-- Title shown on browser tab -->
+    <title>Digital Glossary</title>
+
+    <!-- Linking external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main Heading -->
+    <!-- Displays title of project -->
+    <h1>HTML Tags Digital Glossary</h1>
+
+    <!-- Search Bar -->
+    <!-- User types here to filter table data -->
+    <input 
+        type="text" 
+        id="searchBox" 
+        placeholder="Search HTML tags..."
+    >
+
+    <!-- Table to display HTML tags -->
+    <table id="tagTable">
+
+        <!-- Table Header -->
+        <thead>
+            <tr>
+                <th>Tag</th> <!-- Column 1 -->
+                <th>Description</th> <!-- Column 2 -->
+            </tr>
+        </thead>
+
+        <!-- Table Body (Data Part) -->
+        <tbody>
+
+            <!-- Each row represents one HTML tag -->
+
+            <tr>
+                <td>&lt;p&gt;</td> <!-- HTML paragraph tag -->
+                <td>Paragraph tag</td>
+            </tr>
+
+            <tr>
+                <td>&lt;h1&gt;</td> <!-- Heading tag -->
+                <td>Heading tag</td>
+            </tr>
+
+            <tr>
+                <td>&lt;a&gt;</td> <!-- Anchor tag -->
+                <td>Anchor tag for links</td>
+            </tr>
+
+            <tr>
+                <td>&lt;img&gt;</td> <!-- Image tag -->
+                <td>Image tag</td>
+            </tr>
+
+            <tr>
+                <td>&lt;div&gt;</td> <!-- Division tag -->
+                <td>Division container</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <!-- Linking JavaScript file -->
+    <!-- This file handles search/filter logic -->
+    <script src="script.js"></script>
+
+</body>
+</html>

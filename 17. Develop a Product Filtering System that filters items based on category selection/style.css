@@ -1,0 +1,35 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+/* Buttons */
+.filters button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* Product grid */
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Product card */
+.item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Hide */
+.hide {
+    display: none;
+}

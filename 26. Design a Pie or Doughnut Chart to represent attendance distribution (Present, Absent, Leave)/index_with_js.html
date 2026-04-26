@@ -1,0 +1,57 @@
+
+<!--
+FILE: attendance_js.html
+
+HOW TO RUN:
+1. Open file in browser
+2. No internet required
+
+PURPOSE:
+Pie Chart showing attendance distribution
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container { text-align:center; }
+canvas { border:1px solid #ccc; margin-top:20px; }
+</style>
+</head>
+
+<body>
+
+<h2>Attendance Dashboard</h2>
+
+<div class="container">
+<h3>Pie Chart (Attendance Distribution)</h3>
+<canvas id="pie" width="300" height="300"></canvas>
+</div>
+
+<script>
+// DATA → Present, Absent, Leave
+let data = [70, 20, 10];
+let labels = ["Present", "Absent", "Leave"];
+
+// PIE CHART → shows distribution
+let ctx = pie.getContext("2d");
+let total = data.reduce((a,b)=>a+b,0);
+let start = 0;
+let colors = ["green","red","orange"];
+
+data.forEach((value,i)=>{
+ let slice = (value/total)*2*Math.PI;
+
+ ctx.beginPath();
+ ctx.moveTo(150,150);
+ ctx.arc(150,150,100,start,start+slice);
+ ctx.fillStyle = colors[i];
+ ctx.fill();
+
+ start += slice;
+});
+</script>
+
+</body>
+</html>
+```

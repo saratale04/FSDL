@@ -1,0 +1,32 @@
+/*
+====================================================
+THEME SWITCHER - CSS FILE
+====================================================
+
+We create two themes:
+1. Light Theme (default)
+2. Dark Theme
+
+====================================================
+*/
+
+/* Light Theme (default) */
+body {
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-family: Arial;
+}
+
+/* Dark Theme class */
+.dark {
+    background-color: black;
+    color: white;
+}
+
+/* Button styling */
+button {
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+}

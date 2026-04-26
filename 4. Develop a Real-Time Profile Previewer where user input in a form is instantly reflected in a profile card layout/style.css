@@ -1,0 +1,39 @@
+/*
+====================================================
+PROFILE PREVIEWER - CSS FILE
+====================================================
+
+This file styles:
+- Form inputs
+- Profile card
+====================================================
+*/
+
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Input section */
+.form input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 250px;
+}
+
+/* Profile card */
+.card {
+    background: white;
+    width: 250px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Profile image */
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}

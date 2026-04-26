@@ -1,0 +1,55 @@
+body {
+  font-family: Arial;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* FAQ container */
+.faq {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Each item */
+.faq-item {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Question button */
+.question {
+  width: 100%;
+  padding: 15px;
+  background: #3498db;
+  color: white;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Hover effect */
+.question:hover {
+  background: #2980b9;
+}
+
+/* Answer section (hidden by default) */
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  background: white;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+}
+
+/* Active answer */
+.faq-item.active .answer {
+  max-height: 100px; /* adjust based on content */
+  padding: 10px 15px;
+}

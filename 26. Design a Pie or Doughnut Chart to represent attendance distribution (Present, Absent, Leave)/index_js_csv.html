@@ -1,0 +1,62 @@
+
+<!--
+FILE: attendance_csv.html
+
+HOW TO RUN:
+1. Open in browser
+2. No internet required
+
+PURPOSE:
+Pie chart using CSV data
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 align="center">Attendance Dashboard (CSV)</h2>
+
+<h3>Pie Chart (Attendance Distribution)</h3>
+<canvas id="pie" width="300" height="300"></canvas>
+
+<script>
+// CSV DATA
+const csv = `
+Type,Count
+Present,70
+Absent,20
+Leave,10
+`;
+
+let rows = csv.trim().split("\n");
+rows.shift();
+
+let data=[];
+
+rows.forEach(r=>{
+ let [type,count]=r.split(",");
+ data.push(+count);
+});
+
+// DRAW PIE
+let ctx = pie.getContext("2d");
+let total = data.reduce((a,b)=>a+b,0);
+let start = 0;
+let colors = ["green","red","orange"];
+
+data.forEach((value,i)=>{
+ let slice = (value/total)*2*Math.PI;
+
+ ctx.beginPath();
+ ctx.moveTo(150,150);
+ ctx.arc(150,150,100,start,start+slice);
+ ctx.fillStyle = colors[i];
+ ctx.fill();
+
+ start += slice;
+});
+</script>
+
+</body>
+</html>
+```

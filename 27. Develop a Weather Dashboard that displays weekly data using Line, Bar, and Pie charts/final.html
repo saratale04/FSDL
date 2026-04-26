@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather Dashboard</title>
+
+    <!-- Load Chart.js -->
+    <script src="chart.js"></script>
+
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .chart-container{
+            width: 80%;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Heading -->
+<h1>Weekly Weather Dashboard</h1>
+
+<!-- Line Chart -->
+<div class="chart-container">
+    <canvas id="lineChart"></canvas>
+</div>
+
+<!-- Bar Chart -->
+<div class="chart-container">
+    <canvas id="barChart"></canvas>
+</div>
+
+<!-- Pie Chart -->
+<div class="chart-container">
+    <canvas id="pieChart"></canvas>
+</div>
+
+<script>
+
+/* Static Data */
+const days = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+const temp = [30,32,29,31,33,34,30];
+const rainfall = [5,8,3,6,2,1,4];
+const weatherType = [4,2,1]; // Sunny, Cloudy, Rainy
+
+/* Line Chart - Temperature */
+new Chart(document.getElementById("lineChart"), {
+    type: 'line',
+    data: {
+        labels: days,
+        datasets: [{
+            label: 'Temperature (°C)',
+            data: temp,
+            borderColor: 'blue',
+            fill: false
+        }]
+    }
+});
+
+/* Bar Chart - Rainfall */
+new Chart(document.getElementById("barChart"), {
+    type: 'bar',
+    data: {
+        labels: days,
+        datasets: [{
+            label: 'Rainfall (mm)',
+            data: rainfall,
+            backgroundColor: 'green'
+        }]
+    }
+});
+
+/* Pie Chart - Weather Distribution */
+new Chart(document.getElementById("pieChart"), {
+    type: 'pie',
+    data: {
+        labels: ["Sunny","Cloudy","Rainy"],
+        datasets: [{
+            data: weatherType,
+            backgroundColor: [
+                'orange',
+                'gray',
+                'skyblue'
+            ]
+        }]
+    }
+});
+
+</script>
+
+</body>
+</html>
+```

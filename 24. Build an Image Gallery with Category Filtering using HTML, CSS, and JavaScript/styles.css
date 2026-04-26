@@ -1,0 +1,47 @@
+body {
+    font-family: Arial;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+h2 {
+    margin: 20px;
+}
+
+/* Buttons */
+.filters button {
+    padding: 8px 15px;
+    margin: 5px;
+    border: none;
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background: #555;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* Hover zoom */
+.image img:hover {
+    transform: scale(1.1);
+}
+
+/* Hide class */
+.hide {
+    display: none;
+}

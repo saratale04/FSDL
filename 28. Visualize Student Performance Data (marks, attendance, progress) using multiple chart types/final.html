@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance Dashboard</title>
+
+    <!-- Load Chart.js -->
+    <script src="chart.js"></script>
+
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .chart-container{
+            width: 80%;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Heading -->
+<h1>Student Performance Dashboard</h1>
+
+<!-- Bar Chart -->
+<div class="chart-container">
+    <canvas id="marksChart"></canvas>
+</div>
+
+<!-- Line Chart -->
+<div class="chart-container">
+    <canvas id="attendanceChart"></canvas>
+</div>
+
+<!-- Doughnut Chart -->
+<div class="chart-container">
+    <canvas id="progressChart"></canvas>
+</div>
+
+<script>
+
+/* Static Data */
+const students = ["Aisha","Rahul","Neha","Arjun","Priya"];
+const marks = [85,78,92,70,88];
+const attendance = [90,85,95,80,92];
+const progress = [2,2,1];   // Improved, Stable, Declined
+
+/* Bar Chart - Marks */
+new Chart(document.getElementById("marksChart"), {
+    type: 'bar',
+    data: {
+        labels: students,
+        datasets: [{
+            label: 'Marks',
+            data: marks,
+            backgroundColor: 'skyblue'
+        }]
+    }
+});
+
+/* Line Chart - Attendance */
+new Chart(document.getElementById("attendanceChart"), {
+    type: 'line',
+    data: {
+        labels: students,
+        datasets: [{
+            label: 'Attendance (%)',
+            data: attendance,
+            borderColor: 'green',
+            fill: false
+        }]
+    }
+});
+
+/* Doughnut Chart - Progress */
+new Chart(document.getElementById("progressChart"), {
+    type: 'doughnut',
+    data: {
+        labels: ["Improved","Stable","Declined"],
+        datasets: [{
+            data: progress,
+            backgroundColor: [
+                'blue',
+                'orange',
+                'red'
+            ]
+        }]
+    }
+});
+
+</script>
+
+</body>
+</html>
+```

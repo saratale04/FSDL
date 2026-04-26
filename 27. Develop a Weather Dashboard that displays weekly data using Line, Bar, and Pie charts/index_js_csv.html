@@ -1,0 +1,66 @@
+
+<!--
+FILE: weather_csv_labeled.html
+
+HOW TO RUN:
+Open in browser
+
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 align="center">Weather Dashboard (CSV)</h2>
+
+<h3>Line Chart (Temperature)</h3>
+<canvas id="c1" width="600" height="200"></canvas>
+
+<h3>Bar Chart (Rainfall)</h3>
+<canvas id="c2" width="600" height="200"></canvas>
+
+<script>
+// CSV DATA
+const csv=`
+Day,Temp,Rain
+Mon,30,5
+Tue,32,10
+Wed,31,8
+Thu,29,2
+Fri,28,0
+Sat,27,1
+Sun,26,3
+`;
+
+let rows=csv.trim().split("\n");
+rows.shift();
+
+let temp=[],rain=[];
+
+rows.forEach(r=>{
+ let [d,t,ra]=r.split(",");
+ temp.push(+t);
+ rain.push(+ra);
+});
+
+// LINE
+let ctx1=c1.getContext("2d");
+ctx1.beginPath();
+temp.forEach((t,i)=>{
+ let x=50+i*80,y=150-t*3;
+ i==0?ctx1.moveTo(x,y):ctx1.lineTo(x,y);
+});
+ctx1.stroke();
+
+// BAR
+let ctx2=c2.getContext("2d");
+ctx2.fillStyle="green";
+rain.forEach((r,i)=>{
+ let x=50+i*80,y=150-r*10;
+ ctx2.fillRect(x,y,20,r*10);
+});
+</script>
+
+</body>
+</html>
+```

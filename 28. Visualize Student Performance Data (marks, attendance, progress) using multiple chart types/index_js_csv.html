@@ -1,0 +1,65 @@
+
+<!--
+FILE: student_csv_labeled.html
+
+HOW TO RUN:
+1. Open in browser
+2. No internet required
+
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 align="center">Student Performance Dashboard (CSV)</h2>
+
+<h3>Line Chart (Marks)</h3>
+<canvas id="c1" width="600" height="200"></canvas>
+
+<h3>Bar Chart (Attendance %)</h3>
+<canvas id="c2" width="600" height="200"></canvas>
+
+<script>
+// CSV DATA
+const csv=`
+Subject,Marks,Attendance
+Math,80,90
+Science,75,85
+English,85,88
+History,70,80
+CS,90,95
+`;
+
+let rows=csv.trim().split("\n");
+rows.shift();
+
+let marks=[],attendance=[];
+
+rows.forEach(r=>{
+ let [s,m,a]=r.split(",");
+ marks.push(+m);
+ attendance.push(+a);
+});
+
+// LINE
+let ctx1=c1.getContext("2d");
+ctx1.beginPath();
+marks.forEach((m,i)=>{
+ let x=50+i*80,y=150-m*2;
+ i==0?ctx1.moveTo(x,y):ctx1.lineTo(x,y);
+});
+ctx1.stroke();
+
+// BAR
+let ctx2=c2.getContext("2d");
+ctx2.fillStyle="purple";
+attendance.forEach((a,i)=>{
+ let x=50+i*80,y=150-a*2;
+ ctx2.fillRect(x,y,20,a*2);
+});
+</script>
+
+</body>
+</html>
+```

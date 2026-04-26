@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Student Registration</h2>
+
+    <form id="regForm">
+
+        <!-- Name -->
+        <label>Name:</label>
+        <input type="text" id="name" required>
+
+        <!-- Email -->
+        <label>Email:</label>
+        <input type="email" id="email" required>
+
+        <!-- Gender -->
+        <label>Gender:</label>
+        <div class="gender">
+            <label>
+                <input type="radio" name="gender" value="Male"> Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="Female"> Female
+            </label>
+        </div>
+
+        <!-- Course -->
+        <label>Course:</label>
+        <select id="course" required>
+            <option value="">Select Course</option>
+            <option>B.Tech</option>
+            <option>BCA</option>
+            <option>BBA</option>
+        </select>
+
+        <!-- Address -->
+        <label>Address:</label>
+        <textarea id="address"></textarea>
+
+        <!-- Submit -->
+        <button type="submit">Register</button>
+
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!--
+====================================================
+PRICING TOGGLE INTERFACE - HTML FILE
+====================================================
+
+This file:
+1. Creates webpage structure
+2. Displays toggle switch
+3. Shows pricing cards
+
+JavaScript will update prices dynamically
+====================================================
+-->
+
+<!DOCTYPE html> <!-- Defines HTML5 document -->
+
+<html>
+<head>
+    <!-- Title shown on browser tab -->
+    <title>Pricing Toggle</title>
+
+    <!-- Link external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Heading -->
+    <h1>Pricing Plans</h1>
+
+    <!-- Toggle Switch Section -->
+    <label>
+        Monthly
+        
+        <!-- Checkbox used as toggle -->
+        <input type="checkbox" id="toggleSwitch">
+        
+        Yearly
+    </label>
+
+    <!-- Container holding all pricing cards -->
+    <div class="container">
+
+        <!-- Basic Plan Card -->
+        <div class="card">
+            <h2>Basic</h2>
+            <!-- Price will change using JavaScript -->
+            <p class="price" id="basicPrice">₹500 / month</p>
+        </div>
+
+        <!-- Pro Plan Card -->
+        <div class="card">
+            <h2>Pro</h2>
+            <p class="price" id="proPrice">₹1000 / month</p>
+        </div>
+
+        <!-- Premium Plan Card -->
+        <div class="card">
+            <h2>Premium</h2>
+            <p class="price" id="premiumPrice">₹1500 / month</p>
+        </div>
+
+    </div>
+
+    <!-- Link JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

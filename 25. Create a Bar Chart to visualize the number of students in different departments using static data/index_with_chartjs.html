@@ -1,0 +1,87 @@
+
+<!--
+HOW TO RUN:
+
+1. Keep both files in SAME folder:
+   - index.html
+   - chart.js (downloaded Chart.js library)
+
+2. Open index.html in browser (double click)
+
+3. No internet required
+
+PURPOSE:
+- CSV data is written inside JS
+- Parsed manually
+- Chart.js used to display bar chart
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bar Chart using Chart.js (CSV Data)</title>
+</head>
+<body>
+
+<h2 style="text-align:center;">Students by Department</h2>
+
+<!-- Canvas is required by Chart.js to draw chart -->
+<canvas id="myChart" width="600" height="400"></canvas>
+
+<!-- Load Chart.js locally -->
+<script src="chart.js"></script>
+
+<script>
+    // CSV DATA (hardcoded)
+    const csvText = `
+Department,Students
+Computer,120
+Mechanical,90
+Electrical,70
+Civil,60
+IT,100
+`;
+
+    // Step 1: Split into rows
+    const lines = csvText.trim().split("\n");
+
+    // Step 2: Remove header
+    lines.shift();
+
+    // Arrays for Chart.js
+    const labels = [];
+    const values = [];
+
+    // Step 3: Parse CSV
+    lines.forEach(line => {
+        const [dept, students] = line.split(",");
+        labels.push(dept); // X-axis labels
+        values.push(parseInt(students)); // Y-axis values
+    });
+
+    // Step 4: Create Chart
+    const ctx = document.getElementById("myChart").getContext("2d");
+
+    const myChart = new Chart(ctx, {
+        type: "bar", // Bar chart
+        data: {
+            labels: labels,
+            datasets: [{
+                label: "Number of Students",
+                data: values,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true // Chart starts from 0
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
+```

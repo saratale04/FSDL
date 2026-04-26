@@ -1,0 +1,88 @@
+body {
+    font-family: Arial;
+    background: #f7f7f7;
+    color: #111;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.btn {
+    background: grey;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+
+/* Sections */
+.section {
+    padding: 60px;
+    text-align: center;
+}
+
+/* Skills */
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.skills span {
+    background: black;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Projects */
+.projects {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Contact */
+.contact form {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+}

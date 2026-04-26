@@ -1,0 +1,44 @@
+body {
+  font-family: Arial;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+}
+
+.cart {
+  width: 300px;
+  margin: auto;
+}
+
+.item {
+  background: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.controls button {
+  padding: 5px 10px;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.controls span {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+h3 {
+  margin-top: 20px;
+}
+

@@ -1,0 +1,31 @@
+/* Basic styling for clean UI */
+
+body {
+    font-family: Arial;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+/* Search box styling */
+input {
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}

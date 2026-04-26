@@ -1,0 +1,89 @@
+
+<!--
+File: index.html
+
+HOW TO RUN:
+1. Save this file as "index.html"
+2. Double click the file OR open with any browser (Chrome, Edge, etc.)
+3. No internet required
+
+PURPOSE:
+This program creates a Bar Chart using static data (number of students in departments)
+without using any external libraries.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bar Chart - Students by Department</title>
+    <style>
+        /* Styling for the chart container */
+        .chart-container {
+            width: 500px;
+            margin: 50px auto;
+        }
+
+        /* Each bar styling */
+        .bar {
+            background-color: steelblue;
+            margin: 10px 0;
+            color: white;
+            text-align: right;
+            padding: 5px;
+        }
+
+        /* Label styling */
+        .label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align:center;">Students in Departments</h2>
+
+    <div class="chart-container" id="chart"></div>
+
+    <script>
+        // Static data (department name + number of students)
+        // This is the core data required in the question
+        const data = [
+            { dept: "Computer", students: 120 },
+            { dept: "Mechanical", students: 90 },
+            { dept: "Electrical", students: 70 },
+            { dept: "Civil", students: 60 },
+            { dept: "IT", students: 100 }
+        ];
+
+        // Get reference to chart container
+        const chart = document.getElementById("chart");
+
+        // Loop through data and create bars dynamically
+        data.forEach(item => {
+
+            // Create label (department name)
+            const label = document.createElement("div");
+            label.className = "label";
+            label.innerText = item.dept;
+
+            // Create bar
+            const bar = document.createElement("div");
+            bar.className = "bar";
+
+            // Set width proportional to student count
+            // Multiply to make it visually larger
+            bar.style.width = item.students * 3 + "px";
+
+            // Display student count inside bar
+            bar.innerText = item.students;
+
+            // Append label and bar to chart
+            chart.appendChild(label);
+            chart.appendChild(bar);
+        });
+    </script>
+
+</body>
+</html>
+```

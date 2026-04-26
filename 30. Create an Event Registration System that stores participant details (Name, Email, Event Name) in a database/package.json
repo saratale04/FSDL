@@ -1,0 +1,9 @@
+{
+  "name": "event-registration-system",
+  "version": "1.0.0",
+  "description": "Event Registration System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

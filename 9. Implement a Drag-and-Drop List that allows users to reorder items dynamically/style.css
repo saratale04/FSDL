@@ -1,0 +1,26 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  width: 250px;
+  margin: auto;
+}
+
+li {
+  padding: 10px;
+  margin: 8px 0;
+  background: #3498db;
+  color: white;
+  cursor: grab;
+  border-radius: 5px;
+}
+
+/* While dragging */
+.dragging {
+  opacity: 0.5;
+}

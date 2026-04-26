@@ -1,0 +1,80 @@
+
+<!--
+FILE: attendance_chart.html
+
+HOW TO RUN:
+1. Keep chart.js in same folder
+2. Open file
+
+PURPOSE:
+Pie + Doughnut chart using Chart.js
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+ display:flex;
+ justify-content:space-around;
+}
+.box {
+ text-align:center;
+ width:40%;
+}
+</style>
+</head>
+
+<body>
+
+<h2 align="center">Attendance Dashboard</h2>
+
+<div class="container">
+
+<div class="box">
+<h3>Pie Chart (Attendance)</h3>
+<canvas id="pie"></canvas>
+</div>
+
+<div class="box">
+<h3>Doughnut Chart (Attendance)</h3>
+<canvas id="doughnut"></canvas>
+</div>
+
+</div>
+
+<script src="chart.js"></script>
+
+<script>
+// DATA
+let labels = ["Present","Absent","Leave"];
+let values = [70,20,10];
+
+// PIE
+new Chart(pie,{
+ type:"pie",
+ data:{
+  labels:labels,
+  datasets:[{
+   data:values,
+   backgroundColor:["green","red","orange"]
+  }]
+ }
+});
+
+// DOUGHNUT
+new Chart(doughnut,{
+ type:"doughnut",
+ data:{
+  labels:labels,
+  datasets:[{
+   data:values,
+   backgroundColor:["green","red","orange"]
+  }]
+ }
+});
+</script>
+
+</body>
+</html>
+```

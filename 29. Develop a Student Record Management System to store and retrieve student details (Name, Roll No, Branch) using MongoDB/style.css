@@ -1,0 +1,73 @@
+/* ================================= */
+/* FILE NAME: style.css */
+/* Styling for Student System */
+/* ================================= */
+
+/* Body styling */
+body{
+    margin:0; /* Removes default margin */
+    padding:0; /* Removes default padding */
+    font-family:Arial, sans-serif; /* Font style */
+    background:linear-gradient(to right,#4facfe,#00f2fe); /* Background color */
+}
+
+/* Main container */
+.container{
+    width:70%; /* Width of container */
+    margin:40px auto; /* Center align */
+    background:white; /* White background */
+    padding:30px; /* Inner spacing */
+    border-radius:12px; /* Rounded corners */
+    box-shadow:0 0 15px gray; /* Shadow effect */
+}
+
+/* Heading style */
+h1{
+    text-align:center; /* Center heading */
+    color:#333; /* Dark text */
+}
+
+/* Form box */
+.form-box{
+    display:flex; /* Flexbox layout */
+    flex-direction:column; /* Vertical direction */
+    gap:15px; /* Space between elements */
+}
+
+/* Input fields */
+input{
+    padding:12px; /* Space inside box */
+    font-size:16px; /* Text size */
+    border:1px solid gray; /* Border */
+    border-radius:8px; /* Rounded corners */
+}
+
+/* Buttons */
+button{
+    padding:12px; /* Inner spacing */
+    font-size:16px; /* Text size */
+    border:none; /* No border */
+    border-radius:8px; /* Rounded corners */
+    background:#007BFF; /* Blue color */
+    color:white; /* White text */
+    cursor:pointer; /* Hand cursor */
+}
+
+/* Button hover effect */
+button:hover{
+    background:#0056b3; /* Dark blue on hover */
+}
+
+/* Student list area */
+#studentList{
+    margin-top:30px; /* Top spacing */
+}
+
+/* Individual student card */
+.student-card{
+    background:#f4f4f4; /* Light gray */
+    padding:15px; /* Inner spacing */
+    margin-bottom:10px; /* Bottom spacing */
+    border-left:5px solid #007BFF; /* Left blue border */
+    border-radius:8px; /* Rounded corners */
+}

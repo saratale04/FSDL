@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Distribution</title>
+
+    <!-- Load Chart.js -->
+    <script src="chart.js"></script>
+
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .chart-container{
+            width: 80%;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Heading -->
+<h1>Attendance Distribution</h1>
+
+<!-- Canvas for Doughnut Chart -->
+<div class="chart-container">
+    <canvas id="myChart"></canvas>
+</div>
+
+<script>
+
+/* Static Data */
+const status = ["Present", "Absent", "Leave"];
+const count = [75, 15, 10];
+
+/* Create Doughnut Chart */
+new Chart(document.getElementById("myChart"), {
+    type: 'doughnut',
+
+    data: {
+        labels: status,
+        datasets: [{
+            data: count,
+            backgroundColor: [
+                'green',
+                'red',
+                'orange'
+            ]
+        }]
+    },
+
+    options: {
+        responsive: true
+    }
+});
+
+</script>
+
+</body>
+</html>
+```

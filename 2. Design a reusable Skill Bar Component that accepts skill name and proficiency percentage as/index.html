@@ -1,0 +1,52 @@
+<!--
+===========================================
+SKILL BAR COMPONENT (WITH INPUT)
+===========================================
+
+This file creates:
+- Input fields (skill name + percentage)
+- Button to add skill
+- Container to display skill bars
+===========================================
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Skill Bar Component</title>
+
+    <!-- Link external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Page Heading -->
+    <h1>Skill Bar Generator</h1>
+
+    <!-- Input for skill name -->
+    <input 
+        type="text" 
+        id="skillName" 
+        placeholder="Enter skill name"
+    >
+
+    <!-- Input for percentage -->
+    <input 
+        type="number" 
+        id="skillPercent" 
+        placeholder="Enter percentage"
+    >
+
+    <!-- Button to add skill -->
+    <!-- Calls addSkill() function from JS -->
+    <button onclick="addSkill()">Add Skill</button>
+
+    <!-- Container where skill bars will be shown -->
+    <div id="skillsContainer"></div>
+
+    <!-- Link JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

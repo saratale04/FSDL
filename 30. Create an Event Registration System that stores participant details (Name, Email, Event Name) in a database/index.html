@@ -1,0 +1,114 @@
+<!-- ===================================================== -->
+<!-- FILE NAME: index.html -->
+<!-- EVENT REGISTRATION SYSTEM -->
+<!-- Frontend for storing participant details in database -->
+<!-- ===================================================== -->
+
+<!-- ===================================================== -->
+<!-- HOW TO RUN THIS PROJECT AND CONNECT TO BACKEND -->
+<!-- ===================================================== -->
+
+<!--
+1. Create a project folder:
+   EventRegistrationSystem
+
+2. Inside folder create these files:
+   index.html
+   style.css
+   script.js
+   server.js        (Backend file)
+   package.json
+
+3. Install Node.js in your computer.
+
+4. Open terminal inside project folder.
+
+5. Run these commands:
+
+   npm init -y
+   npm install express mongoose cors
+
+6. Make sure MongoDB is installed and running.
+
+7. Put backend code inside server.js
+
+8. Run backend server:
+
+   node server.js
+
+9. If backend runs successfully, it should run on:
+
+   http://localhost:5000
+
+10. In script.js this line should be:
+
+   const API_URL = "http://localhost:5000/participants";
+
+11. Now open index.html in browser
+   OR use Live Server in VS Code.
+
+12. Fill form and click Register.
+
+13. Data will be stored in MongoDB database.
+
+===================================================== -->
+<!-- IMPORTANT -->
+<!-- Frontend sends data to backend using fetch() API -->
+<!-- Backend saves data into MongoDB -->
+<!-- ===================================================== -->
+
+<!DOCTYPE html> <!-- Defines HTML5 document -->
+
+<html lang="en"> <!-- Root HTML starts -->
+
+<head> <!-- Head starts -->
+
+    <meta charset="UTF-8"> <!-- Character encoding -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
+
+    <title>Event Registration System</title> <!-- Browser title -->
+
+    <link rel="stylesheet" href="style.css"> <!-- Connect CSS file -->
+
+</head> <!-- Head ends -->
+
+<body> <!-- Body starts -->
+
+    <!-- Main container -->
+    <div class="container">
+
+        <!-- Heading -->
+        <h1>Event Registration System</h1>
+
+        <!-- Input form -->
+        <div class="form-box">
+
+            <!-- Name input -->
+            <input type="text" id="name" placeholder="Enter Name">
+
+            <!-- Email input -->
+            <input type="email" id="email" placeholder="Enter Email">
+
+            <!-- Event input -->
+            <input type="text" id="eventname" placeholder="Enter Event Name">
+
+            <!-- Register button -->
+            <button onclick="registerParticipant()">Register</button>
+
+            <!-- Show registrations button -->
+            <button onclick="getParticipants()">Show Registrations</button>
+
+        </div>
+
+        <!-- Output area -->
+        <div id="participantList"></div>
+
+    </div>
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js"></script>
+
+</body> <!-- Body ends -->
+
+</html> <!-- HTML ends -->

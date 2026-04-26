@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping Cart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2> Shopping Cart</h2>
+
+<div class="cart">
+
+  <!-- Product 1 -->
+  <div class="item">
+    <span>Apple - ₹50</span>
+    <div class="controls">
+      <button onclick="changeQty(0, -1)">-</button>
+      <span id="qty0">1</span>
+      <button onclick="changeQty(0, 1)">+</button>
+    </div>
+  </div>
+
+  <!-- Product 2 -->
+  <div class="item">
+    <span> Banana - ₹30</span>
+    <div class="controls">
+      <button onclick="changeQty(1, -1)">-</button>
+      <span id="qty1">1</span>
+      <button onclick="changeQty(1, 1)">+</button>
+    </div>
+  </div>
+
+  <!-- Product 3 -->
+  <div class="item">
+    <span>Grapes - ₹40</span>
+    <div class="controls">
+      <button onclick="changeQty(2, -1)">-</button>
+      <span id="qty2">1</span>
+      <button onclick="changeQty(2, 1)">+</button>
+    </div>
+  </div>
+
+</div>
+
+<h3>Total: ₹<span id="total">120</span></h3>
+
+<script src="script.js"></script>
+
+</body>
+</html>

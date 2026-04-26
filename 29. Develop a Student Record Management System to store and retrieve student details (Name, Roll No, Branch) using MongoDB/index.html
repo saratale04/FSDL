@@ -1,0 +1,106 @@
+<!-- =========================================================
+FILE: index.html
+
+STUDENT RECORD MANAGEMENT SYSTEM
+Frontend for storing and retrieving student details
+(Name, Roll No, Branch) using MongoDB backend.
+
+---------------------------------------------------------
+HOW TO CONNECT FRONTEND WITH BACKEND AND RUN PROJECT
+---------------------------------------------------------
+
+1. Create project folder:
+   student-record-system
+
+2. Inside folder create files:
+   index.html
+   style.css
+   script.js
+   server.js   <-- Backend file
+   package.json
+
+3. Install Node.js
+
+4. Open terminal in project folder and run:
+
+   npm init -y
+   npm install express mongoose cors
+
+5. Start MongoDB:
+   Make sure MongoDB service is running.
+
+6. Put backend code in server.js
+   (Ask if you need backend code too)
+
+7. Run backend server:
+
+   node server.js
+
+8. If backend runs on:
+   http://localhost:5000
+
+9. Open index.html in browser
+
+10. Frontend uses fetch() API to connect backend.
+
+========================================================= -->
+<!-- =============================== -->
+<!-- FILE NAME: index.html -->
+<!-- Student Record Management UI -->
+<!-- =============================== -->
+
+<!DOCTYPE html> <!-- Defines HTML5 document -->
+
+<html lang="en"> <!-- Root of HTML document -->
+
+<head> <!-- Head section starts -->
+
+    <meta charset="UTF-8"> <!-- Supports all characters -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive layout -->
+
+    <title>Student Record Management</title> <!-- Browser tab title -->
+
+    <link rel="stylesheet" href="style.css"> <!-- Connect external CSS file -->
+
+</head> <!-- Head section ends -->
+
+<body> <!-- Body starts -->
+
+    <!-- Main container for all content -->
+    <div class="container">
+
+        <!-- Main heading -->
+        <h1>Student Record Management System</h1>
+
+        <!-- Form section -->
+        <div class="form-box">
+
+            <!-- Input for student name -->
+            <input type="text" id="name" placeholder="Enter Student Name">
+
+            <!-- Input for roll number -->
+            <input type="text" id="rollno" placeholder="Enter Roll Number">
+
+            <!-- Input for branch -->
+            <input type="text" id="branch" placeholder="Enter Branch">
+
+            <!-- Button to add student -->
+            <button onclick="addStudent()">Add Student</button>
+
+            <!-- Button to display all students -->
+            <button onclick="getStudents()">Show All Students</button>
+
+        </div>
+
+        <!-- Area where student records will be shown -->
+        <div id="studentList"></div>
+
+    </div>
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js"></script>
+
+</body> <!-- Body ends -->
+
+</html> <!-- HTML ends -->

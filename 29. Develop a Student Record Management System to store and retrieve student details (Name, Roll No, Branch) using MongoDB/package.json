@@ -1,0 +1,9 @@
+{
+  "name": "student-record-system",
+  "version": "1.0.0",
+  "description": "Student Record Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
